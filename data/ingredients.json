@@ -1,0 +1,32 @@
+
+{
+    "solid": [
+        {"name": "garlic powder", "emoji": "🧄"},
+        {"name": "onion powder", "emoji": "🧅"},
+        {"name": "brown sugar", "emoji": ""},
+        {"name": "kosher salt", "emoji": "🧂"},
+        {"name": "black pepper", "emoji": ""},
+        {"name": "red pepper flakes", "emoji": "🌶️"},
+        {"name": "minced garlic cloves", "emoji": "🧄"}
+    ],
+    "liquid": [
+        {"name": "balsamic vinegar", "emoji": ""},
+        {"name": "mayonnaise", "emoji": ""},
+        {"name": "buttermilk", "emoji": ""},
+        {"name": "sour cream", "emoji": ""},
+        {"name": "extra-virgin olive oil", "emoji": "🫒"},
+        {"name": "greek yogurt", "emoji": ""},
+        {"name": "soy sauce", "emoji": ""}
+    ],
+    "spice": [
+        {"name": "fresh parsley", "emoji": ""},
+        {"name": "fresh ginger", "emoji": "🫚"},
+        {"name": "dijon mustard", "emoji": ""},
+        {"name": "fresh cilantro", "emoji": ""},
+        {"name": "fresh oregano", "emoji": "🌿"}
+    ],
+    "fruit": [
+        {"name": "lime","emoji": "🍋‍🟩"}
+
+    ]
+}

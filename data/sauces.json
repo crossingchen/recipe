@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Balsamic Ranch Dressing",
+        "ingredients": [
+            "mayonnaise",
+            "sour cream",
+            "buttermilk",
+            "balsamic vinegar",
+            "onion powder",
+            "garlic powder",
+            "fresh parsley"
+        ]
+    },
+    {
+        "name": "Spicy Garlic Oil",
+        "ingredients": [
+            "extra-virgin olive oil",
+            "minced garlic cloves",
+            "red pepper flakes",
+            "soy sauce"
+        ]
+    },
+    {
+        "name": "Parsley and Lemon Oil",
+        "ingredients": [
+            "extra-virgin olive oil",
+            "minced shallot",
+            "lemon zest",
+            "fresh parsley"
+        ]
+    },
+    {
+        "name": "Green Goddess Dressing",
+        "ingredients": [
+            "mayonnaise",
+            "buttermilk",
+            "lemon juice",
+            "celery leaves",
+            "fresh parsley",
+            "fresh tarragon",
+            "fresh chives",
+            "kosher salt",
+            "black pepper"
+        ]
+    }
+]
