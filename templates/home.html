@@ -18,50 +18,50 @@
     <br>
 
     <h3>What you have</h3>
-    <h4>Flow-y</h4>
+    <h5>Flow-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['flowie'] %}
-            <button type="button" class="btn btn-outline-warning" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-info btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
     </div>
     <br>
 
-    <h4>Cream-y</h4>
+    <h5>Cream-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['creamie'] %}
-            <button type="button" class="btn btn-outline-warning" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-warning btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
     </div>
     <br>
 
-    <h4>Shak-y</h4>
+    <h5>Shak-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['shakie'] %}
-            <button type="button" class="btn btn-outline-primary" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-primary btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
     </div>
     <br>
 
-    <h4>Fruit-y</h4>
+    <h5>Fruit-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['fruitie'] %}
-            <button type="button" class="btn btn-outline-danger" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-success btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
     </div>
     <br>
 
-    <h4>Spic-y</h4>
+    <h5>Spice</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['spicie'] %}
-            <button type="button" class="btn btn-outline-success" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-danger btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -84,8 +84,12 @@
                 fetch('/get-sauces/' + ingredient)
                     .then(response => response.json())
                     .then(sauces => {
-                        const buttons = sauces.map(sauce => `<button type="button" class="btn btn-secondary" style="margin: 4px;">${sauce.name}</button>`).join('');
-                        const list = sauces.map(sauce => `<li>${sauce.name}</li>`).join('');
+                        const buttons = sauces.map(sauce => `
+                        <a href="${sauce.link}" target="_blank">
+                            <button type="button" class="btn btn-secondary" style="margin: 4px;">${sauce.name}</button>
+                        </a>
+                        `).join('');
+                        // const list = sauces.map(sauce => `<li>${sauce.name}</li>`).join('');
                         document.getElementById('sauces-list').innerHTML = buttons;
                     });
             });

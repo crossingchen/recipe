@@ -6,29 +6,43 @@
         {"name": "brown sugar", "emoji": ""},
         {"name": "kosher salt", "emoji": "🧂"},
         {"name": "black pepper", "emoji": ""},
-        {"name": "red pepper flakes", "emoji": "🌶️"}
+        {"name": "red pepper flakes", "emoji": "🌶️"},
+        {"name": "sesame seeds", "emoji": ""},
+        {"name": "dry steak seasoning", "emoji": ""},
+        {"name": "garlic salt", "emoji": ""}
+
     ],
     "flowie": [
         {"name": "balsamic vinegar", "emoji": ""},
-        {"name": "buttermilk", "emoji": ""},
+        {"name": "rice vinegar", "emoji": ""},
         {"name": "extra-virgin olive oil", "emoji": "🫒"},
-        {"name": "soy sauce", "emoji": ""}
+        {"name": "soy sauce", "emoji": ""},
+        {"name": "sauerkraut", "emoji": ""},
+        {"name": "truffle oil", "emoji": ""},
+        {"name": "honey", "emoji": "🍯"}
     ],
     "creamie": [
         {"name": "mayonnaise", "emoji": ""},
+        {"name": "Miracle Whip", "emoji": ""},
         {"name": "dijon mustard", "emoji": ""},
         {"name": "sour cream", "emoji": ""},
-        {"name": "greek yogurt", "emoji": ""}
+        {"name": "maple syrup", "emoji": "🍁"},
+        {"name": "greek yogurt", "emoji": ""},
+        {"name": "sriracha", "emoji": ""},
+        {"name": "wasabi", "emoji": ""}
     ],
     "spicie": [
         {"name": "fresh parsley", "emoji": ""},
-        {"name": "fresh ginger", "emoji": "🫚"},
+        {"name": "ginger", "emoji": "🫚"},
         {"name": "fresh cilantro", "emoji": ""},
         {"name": "fresh oregano", "emoji": "🌿"},
-        {"name": "minced garlic cloves", "emoji": "🧄"}
+        {"name": "garlic", "emoji": "🧄"},
+        {"name": "scallion", "emoji": ""},
+        {"name": "ground coffee", "emoji": ""}
     ],
     "fruitie": [
-        {"name": "lime","emoji": "🍋‍🟩"}
-
+        {"name": "lime","emoji": "🍋‍🟩"},
+        {"name": "lemon zest","emoji": "🍋"},
+        {"name": "pepper","emoji": "🌶️"}
     ]
 }

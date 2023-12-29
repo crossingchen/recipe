@@ -3,44 +3,121 @@
         "name": "Balsamic Ranch Dressing",
         "ingredients": [
             "mayonnaise",
-            "sour cream",
-            "buttermilk",
+            "dijon mustard",
+            "honey",
             "balsamic vinegar",
-            "onion powder",
-            "garlic powder",
-            "fresh parsley"
-        ]
+            "salt",
+            "extra-virgin olive oil"
+        ],
+        "link": "https://www.saucefanatic.com/creamy-balsamic-dressing/"
+    },
+    {
+        "name": "Carrot Ginger Dressing",
+        "ingredients": [
+            "ginger",
+            "garlic",
+            "miso",
+            "rice vinegar",
+            "sesame oil",
+            "black pepper"
+        ],
+        "link": "https://www.foodnetwork.com/recipes/food-network-kitchen/carrot-ginger-dressing-8615875"
     },
     {
         "name": "Spicy Garlic Oil",
         "ingredients": [
             "extra-virgin olive oil",
-            "minced garlic cloves",
+            "garlic",
             "red pepper flakes",
-            "soy sauce"
-        ]
+            "sesame seeds"
+        ],
+        "link": "https://peasandcrayons.com/2020/09/garlic-chili-oil-recipe.html"
     },
     {
         "name": "Parsley and Lemon Oil",
         "ingredients": [
             "extra-virgin olive oil",
-            "minced shallot",
             "lemon zest",
             "fresh parsley"
-        ]
+        ],
+        "link": "https://cooking.nytimes.com/recipes/10890-lemon-and-parsley-oil"
     },
     {
-        "name": "Green Goddess Dressing",
+        "name": "Basic Poke",
+        "ingredients": [
+            "rice vinegar",
+            "soy sauce",
+            "sesame oil",
+            "maple syrup",
+            "ginger",
+            "lime"
+        ],
+        "link": "https://www.aline-made.com/poke-sauce/#%f0%9f%9b%92-ingredients"
+    },
+    {
+        "name": "Shoyu Ahi Poke",
+        "ingredients": [
+            "onion",
+            "soy sauce",
+            "sesame",
+            "sea salt",
+            "red pepper flakes",
+            "macadamia nuts"
+        ],
+        "link": "https://playswellwithbutter.com/ahi-poke/"
+    },
+    {
+        "name": "Spicy Ahi Poke",
         "ingredients": [
             "mayonnaise",
-            "buttermilk",
-            "lemon juice",
-            "celery leaves",
-            "fresh parsley",
-            "fresh tarragon",
-            "fresh chives",
-            "kosher salt",
-            "black pepper"
-        ]
+            "sriracha",
+            "soy sauce",
+            "sesame oil",
+            "scallion"
+        ],
+        "link": "https://keepingitrelle.com/spicy-ahi-poke-recipe/"
+    },
+    {
+        "name": "Hawaiian Style Poke",
+        "ingredients": [
+            "sea salt",
+            "ginger",
+            "soy sauce",
+            "oyster sauce",
+            "scallion",
+            "sesame seeds"
+        ],
+        "link": "https://chefchrischo.com/ahi-poke-bowl/"
+    },
+    {
+        "name": "Kona Coffee Poke",
+        "ingredients": [
+            "soy sauce",
+            "oyster sauce",
+            "pepper",
+            "pickled ginger",
+            "greek yogurt",
+            "garlic",
+            "sauerkraut",
+            "Miracle Whip",
+            "ground coffee",
+            "sesame seeds"
+        ],
+        "link": "https://www.ktasuperstores.com/recipes/kona-coffee-ahi-poke"
+    },
+    {
+        "name": "Chef Michi's Poke",
+        "ingredients": [
+            "greek yogurt",
+            "mayonnaise",
+            "wasabi",
+            "garlic salt",
+            "sesame oil",
+            "soy sauce",
+            "truffle oil",
+            "dry steak seasoning",
+            "scallion"
+        ],
+        "link": "https://www.ktasuperstores.com/recipes/chef-michis-poke-bowl"
     }
 ]
