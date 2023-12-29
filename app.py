@@ -3,8 +3,6 @@ import json
 
 def load_ingredients():
     with open('data/ingredients.json') as file:
-        print('in here')
-        print(file)
         data = json.load(file)
     return data
 
