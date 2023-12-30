@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 import json
 
 def load_ingredients():
@@ -15,11 +15,12 @@ def hello():
     return render_template('home.html', ingredients=ingredients)
 
 
-@app.route('/get-sauces/<ingredient>')
-def get_sauces(ingredient):
+@app.route('/get-sauces')
+def get_sauces():
+    ingredients = request.args.getlist('ingredients[]')
     with open('data/sauces.json') as file:
         sauces = json.load(file)
-    matching_sauces = [sauce for sauce in sauces if ingredient in sauce["ingredients"]]
+    matching_sauces = [sauce for sauce in sauces if any(ing in sauce["ingredients"] for ing in ingredients)]
     return jsonify(matching_sauces)
 
 

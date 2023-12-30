@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sauce Source</title>
 
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- bootstrap libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
@@ -21,7 +30,7 @@
     <h5>Flow-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['flowie'] %}
-            <button type="button" class="btn btn-outline-info btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-info btn-sm ingredient-btn" style="margin: 4px;" data-bs-toggle="button" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -31,7 +40,7 @@
     <h5>Cream-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['creamie'] %}
-            <button type="button" class="btn btn-outline-warning btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-warning btn-sm ingredient-btn" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -41,7 +50,7 @@
     <h5>Shak-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['shakie'] %}
-            <button type="button" class="btn btn-outline-primary btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-primary btn-sm ingredient-btn" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -51,7 +60,7 @@
     <h5>Fruit-y</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['fruitie'] %}
-            <button type="button" class="btn btn-outline-success btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-success btn-sm ingredient-btn" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -61,7 +70,7 @@
     <h5>Spice</h5>
     <div style="display: flex; justify-content: center; flex-wrap: wrap;">
         {% for ingredient in ingredients['spicie'] %}
-            <button type="button" class="btn btn-outline-danger btn-sm" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
+            <button type="button" class="btn btn-outline-danger btn-sm ingredient-btn" style="margin: 4px;" data-ingredient="{{ ingredient.name }}">
                 {{ ingredient.emoji }} {{ ingredient.name }}
             </button>
         {% endfor %}
@@ -71,31 +80,37 @@
     <h3>What you can make</h3>
     <div id="sauces-list" style="display: flex; justify-content: center; flex-wrap: wrap;"></div>
 
-    <!-- bootstrap libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
     <!-- other scripts -->
     <script>
-        document.querySelectorAll('.btn').forEach(btn => {
+        let selectedIngredients = [];
+
+        document.querySelectorAll('.ingredient-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const ingredient = this.getAttribute('data-ingredient');
-                fetch('/get-sauces/' + ingredient)
+                const button = bootstrap.Button.getOrCreateInstance(btn)
+
+                if (this.classList.contains('active')) {
+                    selectedIngredients = selectedIngredients.filter(item => item !== ingredient);
+                } else {
+                    selectedIngredients.push(ingredient);
+                }
+                button.toggle()
+
+                const queryString = selectedIngredients.map(ing => `ingredients[]=${encodeURIComponent(ing)}`).join('&');
+                fetch('/get-sauces?' + queryString)
                     .then(response => response.json())
                     .then(sauces => {
                         const buttons = sauces.map(sauce => `
-                        <a href="${sauce.link}" target="_blank">
-                            <button type="button" class="btn btn-secondary" style="margin: 4px;">${sauce.name}</button>
-                        </a>
+                            <a href="${sauce.link}" target="_blank">
+                                <button type="button" class="btn btn-primary" style="margin: 4px;">${sauce.name}</button>
+                            </a>
                         `).join('');
-                        // const list = sauces.map(sauce => `<li>${sauce.name}</li>`).join('');
                         document.getElementById('sauces-list').innerHTML = buttons;
                     });
-            });
-        });
-    </script>
+            })
+        })
 
-</body>
+    </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
         {"name": "garlic powder", "emoji": "🧄"},
         {"name": "onion powder", "emoji": "🧅"},
         {"name": "brown sugar", "emoji": ""},
-        {"name": "kosher salt", "emoji": "🧂"},
+        {"name": "salt", "emoji": "🧂"},
         {"name": "black pepper", "emoji": ""},
         {"name": "red pepper flakes", "emoji": "🌶️"},
         {"name": "sesame seeds", "emoji": ""},
@@ -38,11 +38,11 @@
         {"name": "fresh oregano", "emoji": "🌿"},
         {"name": "garlic", "emoji": "🧄"},
         {"name": "scallion", "emoji": ""},
-        {"name": "ground coffee", "emoji": ""}
+        {"name": "ground coffee", "emoji": ""},
+        {"name": "pepper","emoji": "🌶️"}
     ],
     "fruitie": [
         {"name": "lime","emoji": "🍋‍🟩"},
-        {"name": "lemon zest","emoji": "🍋"},
-        {"name": "pepper","emoji": "🌶️"}
+        {"name": "lemon zest","emoji": "🍋"}
     ]
 }
