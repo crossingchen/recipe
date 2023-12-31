@@ -1,3 +1,45 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+/* 
+Footer Styling
+ */
+.footer {
+    width: 100%;
+    height: 100px; /* Adjust as needed */
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.05);
+    color: #333;
+    text-align: center;
+    line-height: 100px; /* Same as height if you want vertically centered text */
+    font-family: "Copperplate";
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.footer-content p {
+    margin-bottom: 0px;
+}
+.sites {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sites span {
+    margin-right: 10px;
+}
 /* 
 Header Styling
 */
@@ -5,5 +47,15 @@ h1, h3, h5 {
     text-align: center;
     font-family: "Copperplate";
 }
-
-
+h1 {
+    margin: 20px 0px; 
+}
+h3 {
+    margin: 20px 0px;
+}
+/* 
+Iconify
+*/
+iconify-icon {
+    vertical-align: middle;
+}
