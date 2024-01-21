@@ -14,6 +14,7 @@
     ],
     "flowie": [
         {"name": "balsamic vinegar", "emoji": ""},
+        {"name": "red wine vinegar", "emoji": ""},
         {"name": "rice vinegar", "emoji": ""},
         {"name": "extra-virgin olive oil", "emoji": "🫒"},
         {"name": "soy sauce", "emoji": ""},
@@ -36,6 +37,7 @@
         {"name": "ginger", "emoji": "🫚"},
         {"name": "fresh cilantro", "emoji": ""},
         {"name": "fresh oregano", "emoji": "🌿"},
+        {"name": "dry oregano", "emoji": "🌿"},
         {"name": "garlic", "emoji": "🧄"},
         {"name": "scallion", "emoji": ""},
         {"name": "ground coffee", "emoji": ""},

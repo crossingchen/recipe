@@ -119,5 +119,18 @@
             "scallion"
         ],
         "link": "https://www.ktasuperstores.com/recipes/chef-michis-poke-bowl"
+    },
+    {
+        "name": "Greek Salad Dressing",
+        "ingredients": [
+            "red wine vinegar",
+            "dijon mustard",
+            "garlic",
+            "salt",
+            "extra-virgin olive oil",
+            "dry oregano",
+            "pepper"
+        ],
+        "link": "https://www.loveandlemons.com/greek-salad-dressing/"
     }
 ]
